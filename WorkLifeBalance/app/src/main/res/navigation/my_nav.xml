@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/login_interface">
+    <fragment
+        android:id="@+id/login_interface"
+        android:name="com.example.cs125.Login_interface"
+        android:label="fragment_login_interface"
+        tools:layout="@layout/fragment_login_interface" >
+        <action
+            android:id="@+id/action_login_interface_to_signUpFragment6"
+            app:destination="@id/signUpFragment6" />
+        <action
+            android:id="@+id/action_login_interface_to_afterLog"
+            app:destination="@id/afterLog" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment6"
+        android:name="com.example.cs125.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment6_to_login_interface"
+            app:destination="@id/login_interface" />
+    </fragment>
+    <fragment
+        android:id="@+id/getWorkTime"
+        android:name="com.example.cs125.GetWorkTime"
+        android:label="fragment_get_work_time"
+        tools:layout="@layout/fragment_get_work_time" >
+        <action
+            android:id="@+id/action_getWorkTime_to_myTimer"
+            app:destination="@id/myTimer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/afterLog"
+        android:name="com.example.cs125.AfterLog"
+        android:label="fragment_after_log"
+        tools:layout="@layout/fragment_after_log" >
+        <action
+            android:id="@+id/action_afterLog_to_getWorkTime"
+            app:destination="@id/getWorkTime" />
+        <action
+            android:id="@+id/action_afterLog_to_recommendFragment"
+            app:destination="@id/recommendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myTimer"
+        android:name="com.example.cs125.MyTimer"
+        android:label="fragment_my_timer"
+        tools:layout="@layout/fragment_my_timer" >
+        <action
+            android:id="@+id/action_myTimer_to_choose_rest_type"
+            app:destination="@id/choose_rest_type" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommendFragment"
+        android:name="com.example.cs125.RecommendFragment"
+        android:label="fragment_recommend"
+        tools:layout="@layout/fragment_recommend" >
+        <action
+            android:id="@+id/action_recommendFragment_to_myTimer"
+            app:destination="@id/myTimer" />
+    </fragment>
+    <fragment
+        android:id="@+id/choose_rest_type"
+        android:name="com.example.cs125.choose_rest_type"
+        android:label="fragment_choose_rest_type"
+        tools:layout="@layout/fragment_choose_rest_type" />
+
+</navigation>
