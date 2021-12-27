@@ -1,5 +1,6 @@
 #
 Haowei Song, Hongji Yan, Yang Lu
+UCI 2021 Winter Quarter Project
 
 
 #App name Rester
